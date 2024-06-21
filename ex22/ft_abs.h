@@ -6,12 +6,12 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:04:47 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/12 14:48:48 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/06/18 09:42:14 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
-#define FT_ABS_H
+# define FT_ABS_H
 
 #define ABS(value) ((value < 0) ? -(value) : (value))
 

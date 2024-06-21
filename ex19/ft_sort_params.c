@@ -6,16 +6,13 @@
 /*   By: dagarmil <dagarmil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:59:19 by dagarmil          #+#    #+#             */
-/*   Updated: 2024/06/11 12:25:45 by dagarmil         ###   ########.fr       */
+/*   Updated: 2024/06/18 09:49:33 by dagarmil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
+void	ft_putchar(char c);
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -53,15 +50,14 @@ int	main(int ac, char **av)
 	char	*contav;
 
 	i = 1;
-	contav = NULL;
 	while (i < ac)
 	{
 		j = i;
-		while (ft_strcmp(av[i], av[j - 1]) < 0 && j > 1)
+		while (ft_strcmp(av[j], av[j - 1]) < 0 && j > 1)
 		{
 			contav = av[j - 1];
-			av[j - 1] = av[i];
-			av[i] = contav;
+			av[j - 1] = av[j];
+			av[j] = contav;
 			j--;
 		}
 		i++;
